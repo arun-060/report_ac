@@ -32,7 +32,7 @@ export default function SignIn() {
         if (role === 'admin') {
           navigate('/admin-dashboard');
         } else if (role === 'student') {
-          navigate('/dashboard');
+          navigate(`/dashboard?userId=${user.uid}`);
         } else if (role === 'faculty') {
           navigate('/faculty-dashboard');
         } else {
