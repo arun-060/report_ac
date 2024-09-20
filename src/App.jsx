@@ -8,7 +8,9 @@ import {
  } from 'react-router-dom'
 import Dashboard from './pages/Dashboard/Dashboard';
 import SignIn from './pages/SignIn/SignIn';
-import SignUp from  './pages/SignUp/SignUp'
+import SignUp from  './pages/SignUp/SignUp';
+import FacultyDashboard from './pages/FacultyDashboard/FacultyDashboard';
+import AdminDashboard from './pages/AdminDashboard/AdminDashboard';
 
 function App() {
   return (
@@ -22,7 +24,11 @@ function App() {
 
         {/* Dashboard Route */}
         <Route path="/dashboard" element={<Dashboard />} />
-      </Routes>
+
+        <Route path="/admin-dashboard" element={<AdminDashboard />} />
+
+        <Route path="/faculty-dashboard" element={<FacultyDashboard />} />
+      </Routes> 
     </Router>
   );
 }
