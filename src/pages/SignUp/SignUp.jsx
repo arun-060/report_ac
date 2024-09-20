@@ -6,20 +6,21 @@ export default function SignUp() {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-const navigate = useNavigate();
+  const navigate = useNavigate();
 
+  // Navigate to Sign-In
+  const signChange = (event) => {
+    event.preventDefault();
+    console.log('Sign-In clicked');
+    navigate('/signin');
+  };
 
-
-  const signChange=(event)=>{
-    event.preventDefault()
-    console.log("cliicked")
-    navigate('/sign-in')
-  }
-
+  // Handle Sign-Up form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Sign up with:', { username, email, password });
-    // Here you would typically send the data to your backend
+    // Here you would typically send the data to your backend for processing.
+    navigate('/sign-in'); // Navigate to Sign-In after successful registration (for example)
   };
 
   return (
@@ -33,6 +34,7 @@ const navigate = useNavigate();
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             required
+            className="input-field"
           />
           <input
             type="email"
@@ -40,6 +42,7 @@ const navigate = useNavigate();
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
+            className="input-field"
           />
           <input
             type="password"
@@ -47,18 +50,16 @@ const navigate = useNavigate();
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
+            className="input-field"
           />
-          <button type="submit" className="sign-up-button">Sing Up</button>
+          <button type="submit" className="sign-up-button">Sign Up</button>
         </form>
         <p>Already have an account? 
-          <button onClick={signChange}>Sign-In</button>
+          <button className="link-button" onClick={signChange}>Sign-In</button>
         </p>
         <div className="social-signup">
-          <button className="google-signup">
-            <img src="/placeholder.svg?height=24&width=24" alt="Sign up with Google" />
-          </button>
-          <button className="github-signup">
-            <img src="/placeholder.svg?height=24&width=24" alt="Sign up with GitHub" />
+          <button className="social-button google-signup">
+            <img src="/google.png" alt="Google" className="social-icon" /> Sign up with Google
           </button>
         </div>
       </div>
