@@ -27,12 +27,13 @@ export default function SignIn() {
       if (snapshot.exists()) {
         const userData = snapshot.val();
         const role = userData.role; 
+        const username = userData.username;
 
         // Role-based navigation
         if (role === 'admin') {
           navigate('/admin-dashboard');
         } else if (role === 'student') {
-          navigate(`/dashboard?userId=${user.uid}`);
+          navigate(`/dashboard?userId=${username}`);
         } else if (role === 'faculty') {
           navigate('/faculty-dashboard');
         } else {

@@ -28,6 +28,7 @@
     margin-bottom: 15px;
     mix-blend-mode: multiply;
     align-items: center;
+    object-fit: cover;
 }
 
 .student-name {

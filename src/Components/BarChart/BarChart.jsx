@@ -6,18 +6,18 @@ import "./BarChart.css"
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 
-const data = {
-    labels: ['Math', 'Science', 'English', 'History', 'Geography'],
-    datasets: [
-        {
-            label: 'Marks',
-            data: [85, 90, 78, 88, 76],
-            backgroundColor: 'rgba(75, 192, 192, 0.2)',
-            borderColor: 'rgba(75, 192, 192, 1)',
-            borderWidth: 1,
-        },
-    ],
-};
+// const data = {
+//     labels: ['Math', 'Science', 'English', 'History', 'Geography'],
+//     datasets: [
+//         {
+//             label: 'Marks',
+//             data: [85, 90, 78, 88, 76],
+//             backgroundColor: 'rgba(75, 192, 192, 0.2)',
+//             borderColor: 'rgba(75, 192, 192, 1)',
+//             borderWidth: 1,
+//         },
+//     ],
+// };
 
 const options = {
     responsive: true,
@@ -32,7 +32,7 @@ const options = {
     },
 };
 
-function BarChart() {
+function BarChart({data}) {
   return (
     <div className="char-container">
         <Bar data={data} options={options} />
