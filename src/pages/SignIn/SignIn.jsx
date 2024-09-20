@@ -45,6 +45,6 @@ export default function SignIn() {
           </button>
         </div>
       </div>
-    </div>
-  );
+    </div>
+  );
 }

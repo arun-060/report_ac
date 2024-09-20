@@ -18,7 +18,7 @@
 }
 
 .student-information {
-    text-align: center;
+    text-align: start;
 }
 
 .student-photo {
@@ -27,6 +27,7 @@
     border-radius: 50px;
     margin-bottom: 15px;
     mix-blend-mode: multiply;
+    align-items: center;
 }
 
 .student-name {
@@ -46,10 +47,10 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 400px;
 }
 
 .timeline-container {
-    padding: 20px;
     flex: 1;
     overflow-y: auto;
     max-height: 100vh;

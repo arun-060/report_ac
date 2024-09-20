@@ -1,5 +1,4 @@
 import React from 'react'
-import { Bar } from 'react-chartjs-2'
 import BarChart from '../../Components/BarChart/BarChart'
 import PieChart from '../../Components/PieChart/PieChart'
 import Timeline from '../../Components/Timeline/Timeline'
@@ -13,11 +12,11 @@ function Dashboard() {
             <div className="student-section">
                 <div className="student-information">
                     <img className="student-photo" src={student_ic} />
-                    <h2 class="student-name">John Doe</h2>
+                    <h2 class="student-name">Vedant Shinde</h2>
                     <p class="student-details">ID: 123456</p>
                     <p class="student-details">Major: Computer Science</p>
                     <p class="student-details">Year: Sophomore</p>
-                    <p class="student-details">Email: john.doe@example.com</p>
+                    <p class="student-details">Email: vedantshinde@git-india.edu.in</p>
                 </div>
             </div>
             <div className="data-container">
