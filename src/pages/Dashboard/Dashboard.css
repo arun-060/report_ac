@@ -1,0 +1,58 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+.dashboard-container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.student-section {
+    width: 280px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    position: fixed;
+}
+
+.student-information {
+    text-align: center;
+}
+
+.student-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    margin-bottom: 15px;
+    mix-blend-mode: multiply;
+}
+
+.student-name {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.student-detail {
+    font-size: 16px;
+    margin: 5px 0
+}
+
+.data-container {
+    margin-left: 320px;
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.timeline-container {
+    padding: 20px;
+    flex: 1;
+    overflow-y: auto;
+    max-height: 100vh;
+    -ms-overflow-style: none;
+    height: 100vh;
+}
