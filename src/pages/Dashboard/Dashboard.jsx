@@ -8,6 +8,10 @@ import PieChart from "../../Components/PieChart/PieChart";
 import Timeline from "../../Components/Timeline/Timeline";
 import PlotTime from "../../Components/PlotTime/PlotTime";
 import student_ic from "./../../assets/Dashboard/student_ic.png";
+import { Bar } from 'react-chartjs-2'
+import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js'
+
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 
 function Dashboard() {
   const location = useLocation();
@@ -19,6 +23,7 @@ function Dashboard() {
   const [error, setError] = useState(null);
   const [activities, setActivities] = useState([]); // State to store fetched activities
   const [results, setResults] = useState(null); // State to store fetched results
+  let totalActivity = 0
 
   const fetchStudentData = async () => {
     try {
@@ -70,6 +75,7 @@ function Dashboard() {
     const studentId = "Arunkumar Gupta"; // Replace with the actual student ID
     fetchActivities(studentId)
       .then((activities) => {
+        totalActivity = activities.length()
         console.log("Activities:", activities);
       })
       .catch((error) => {
@@ -103,6 +109,23 @@ function Dashboard() {
     fetchResults();
   }, [username]);
 
+  const handleResultsData = (semesterData) => {
+    const labels = semesterData.map((subject) => subject.subject);
+    const data = semesterData.map((subject) => subject.marks);
+  
+    return {
+      labels,
+      datasets: [
+        {
+          label: 'Marks',
+          data,
+          backgroundColor: 'rgba(75, 192, 192, 0.2)',
+          borderColor: 'rgba(75, 192, 192, 1)',
+          borderWidth: 1,
+        },
+      ],
+    };
+  };
   return (
     <div className="dashboard-container">
       <div className="student-section">
@@ -123,8 +146,8 @@ function Dashboard() {
         {results && Object.keys(results).map((semester) => ( // Assuming results state exists
           <div key={semester}>
             <h2>Semester {semester}</h2>
-
-            {/* <BarChart data={data} />  */}
+            <BarChart results={results}/>
+            
           </div>
         ))}
         <PieChart />
