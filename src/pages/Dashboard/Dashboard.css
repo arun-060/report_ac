@@ -18,7 +18,8 @@
 }
 
 .student-information {
-    text-align: start;
+    text-align: center;
+   
 }
 
 .student-photo {
@@ -57,4 +58,8 @@
     max-height: 100vh;
     -ms-overflow-style: none;
     height: 100vh;
+}
+
+span.vertical-timeline-element-date{
+left: 130%;
 }

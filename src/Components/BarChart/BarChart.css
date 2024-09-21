@@ -2,3 +2,45 @@
     width : 400px;
     height: auto;
 }
+
+
+.char-container {
+    background-color: #fff; /* White background for the chart container */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding around the chart */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    margin: 20px 0; /* Margin for spacing between elements */
+    transition: transform 0.2s; /* Smooth scaling on hover */
+}
+
+.char-container:hover {
+    transform: scale(1.02); /* Slightly scale up on hover */
+}
+
+h2 {
+    text-align: center; /* Center the title */
+    color: #333; /* Darker text color for contrast */
+    margin-bottom: 15px; /* Space below title */
+    font-family: 'Arial', sans-serif; /* Font style for the title */
+    font-size: 1.5rem; /* Title size */
+}
+
+.bar-chart {
+    position: relative; /* Relative positioning for better control */
+    width: 100%; /* Full width */
+    height: 400px; /* Fixed height for consistency */
+}
+
+@media (max-width: 768px) {
+    .char-container {
+        padding: 15px; /* Less padding on smaller screens */
+    }
+
+    h2 {
+        font-size: 1.3rem; /* Smaller title size on mobile */
+    }
+
+    .bar-chart {
+        height: 300px; /* Adjust height for smaller screens */
+    }
+}

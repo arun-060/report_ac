@@ -1,0 +1,312 @@
+
+.header {
+  background-color: #dcc2f4;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+}
+
+.logoSize {
+  height: 40px;
+  width: 40px;
+}
+
+.text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-right: 1000px;
+  color: #fff;
+  margin-left: 10px;
+}
+
+.search-container {
+  position: fixed;
+  margin-left: 570px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  border-radius: 50px;
+}
+
+.search-input {
+  padding: 0.5rem 1rem;
+  width: 300px;
+  border: none;
+  outline: none;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 41%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-icon {
+  width: 30px;
+  height: 30px;
+  color: #fff;
+}
+
+.profile-logout {
+  background-color: #e74c3c;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.profile-logout:hover {
+  background-color: #c0392b;
+}
+
+
+.right-panel{
+  width: 100%;
+  border: 1px solid black
+}
+
+
+.report-form {
+    /* max-width: 800px; */
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: 0 auto; */
+    /* height: 100vh; */
+    /* margin: 5px; */
+    /* padding: 20px; */
+    background-color: #fff;
+    border-radius: 8px;
+    margin-top: 90px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .report-In{
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #4D85FD;
+    border-radius: 5px;  
+  }
+  
+  /* .main_content {
+    display: flex;
+    justify-content: center; 
+    padding: 20px;
+} */
+
+.right-panel {
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Set width for responsiveness */
+    max-width: 500px; /* Limit maximum width */
+}
+
+.student-info-form {
+    display: flex;
+    flex-direction: column; /* Arrange form elements vertically */
+    justify-content: center;
+    align-items: center;
+}
+
+.form-group {
+    margin-bottom: 15px; /* Space between form groups */
+}
+
+label {
+    font-weight: bold; /* Bold labels */
+    margin-bottom: 5px; /* Space below label */
+}
+
+input[type="text"],
+input[type="file"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%; /* Full width inputs */
+    box-sizing: border-box; /* Include padding and border in element's total width */
+}
+
+.photo-upload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px dashed #ccc; /* Dashed border for photo upload */
+    border-radius: 4px;
+    height: 150px; /* Fixed height for upload area */
+    background-color: #fff; /* White background for upload area */
+}
+
+.uploaded-photo {
+    max-width: 100%; /* Make sure photo fits within the area */
+    max-height: 100%; /* Maintain aspect ratio */
+}
+
+h2 {
+    margin-bottom: 20px; /* Space below the heading */
+    text-align: center; /* Center the heading */
+}
+
+
+
+  h2 {
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  p{
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  h3 {
+    color: #444;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .semester-selection {
+    margin-bottom: 20px;
+  }
+  
+  .semester-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .semester-button {
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+  }
+  
+  .semester-button.active {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .subject-section, .activity-section {
+    margin-bottom: 20px;
+  }
+  
+  .subject-row, .activity-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  
+  .form-group{
+    text-align: center;
+  }
+  
+  input[type="text"], select {
+    flex: 1;
+    padding: 8px;
+    /* border: 1px solid #ddd; */
+    /* border-radius: 4px; */
+    margin-bottom: 10px;
+    border: 1px solid grey;
+  }
+  input[type="Roll number"], select{
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    border: 1px solid grey;
+    
+
+  }
+  
+  .add-button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 15px;
+  }
+  
+  .add-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .activities-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+  }
+  
+  .activities-table th, .activities-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  
+    
+  }
+  
+  table{
+    width: 100%;
+  }
+  .activities-table th {
+    background-color: #f0f0f0;
+    width: 50%;
+    
+  }
+  
+  .submit-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  
+  
+  
+  /* dividing the screen into image and report form page */
+  .divide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+ 
+  .main_content{
+    
+  }

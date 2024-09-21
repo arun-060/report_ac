@@ -109,23 +109,7 @@ function Dashboard() {
     fetchResults();
   }, [username]);
 
-  const handleResultsData = (semesterData) => {
-    const labels = semesterData.map((subject) => subject.subject);
-    const data = semesterData.map((subject) => subject.marks);
   
-    return {
-      labels,
-      datasets: [
-        {
-          label: 'Marks',
-          data,
-          backgroundColor: 'rgba(75, 192, 192, 0.2)',
-          borderColor: 'rgba(75, 192, 192, 1)',
-          borderWidth: 1,
-        },
-      ],
-    };
-  };
   return (
     <div className="dashboard-container">
       <div className="student-section">
@@ -150,7 +134,7 @@ function Dashboard() {
             
           </div>
         ))}
-        <PieChart />
+        <PieChart activities={activities}/>
         <PlotTime />
       </div>
       <div className="timeline-container">

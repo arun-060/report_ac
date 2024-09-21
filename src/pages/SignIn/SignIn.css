@@ -35,6 +35,13 @@
   margin-bottom: 20px;
 }
 
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
 .sign-in-button:hover {
   background-color: #0056b3;
 }
@@ -69,7 +76,7 @@
 }
 
 .google-signin {
-  background-color: #db4437;
+  background-color: #430f58;
   color: white;
 }
 

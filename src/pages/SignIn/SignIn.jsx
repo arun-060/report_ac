@@ -4,6 +4,9 @@ import { useNavigate } from 'react-router-dom';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { ref, get } from 'firebase/database';
 import { auth, db } from '../../firebase.config';  // Make sure firebase is initialized in firebase.js
+import  gogle from '../../assets/Dashboard/google.png'
+import image from '../../assets/Login/signin.avif'
+// import teacher from '../../assets/Login/'
 
 export default function SignIn() {
   const [email, setEmail] = useState('');
@@ -55,6 +58,10 @@ export default function SignIn() {
 
   return (
     <div className="sign-in-container">
+      <div className='main'>
+        <div className='image'>
+          <img src={image} alt="illustrator" />
+        </div>
       <div className="sign-in-form">
         <h2>Sign In</h2>
         <form onSubmit={handleSignIn}>
@@ -86,9 +93,10 @@ export default function SignIn() {
 
         <div className="social-signin">
           <button className="social-button google-signin">
-            <img src="google.png" alt="Google" className="social-icon" /> Sign in with Google
+            <img src={gogle} alt="Google" className="social-icon" /> Sign in with Google
           </button>
         </div>
+      </div>
       </div>
     </div>
   );

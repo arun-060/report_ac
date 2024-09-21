@@ -1,0 +1,38 @@
+/* .timeline-container {
+    padding: 20px;
+  } */
+
+
+
+
+  .timeline-container {
+    padding: 20px;
+    background-color: #121212; /* Dark background color */
+    color: #ffffff; /* Light text color for contrast */
+  }
+  
+  .vertical-timeline-element {
+    background: rgba(255, 255, 255, 0.1); /* Slightly transparent white for timeline elements */
+    border-radius: 8px; /* Rounded corners */
+  }
+  
+  .vertical-timeline-element-title {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #ffffff; /* Ensure title is white */
+  }
+  
+  .vertical-timeline-element-date {
+    font-size: 1.2em;
+    color: #ffcc00; /* Gold color for the date */
+    font-weight: bold;
+    margin-bottom: 10px;
+
+    font-size: 1.2em;
+    color: #FF5733;
+    font-weight: bold;
+    padding: 20px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+  

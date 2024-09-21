@@ -11,6 +11,8 @@ import SignIn from './pages/SignIn/SignIn';
 import SignUp from  './pages/SignUp/SignUp';
 import FacultyDashboard from './pages/FacultyDashboard/FacultyDashboard';
 import AdminDashboard from './pages/AdminDashboard/AdminDashboard';
+import ReportForm from './pages/ReportForm/ReportForm';
+// import AdminDashboard from './pages/AdminDashboard/AdminDashboard';
 
 function App() {
   return (
@@ -28,6 +30,13 @@ function App() {
         <Route path="/admin-dashboard" element={<AdminDashboard />} />
 
         <Route path="/faculty-dashboard" element={<FacultyDashboard />} />
+
+        <Route path="/ReportForm" element={<ReportForm />} />
+
+
+        {/* <Route path="/AdminDashboard" element={<ReportForm />} /> */}
+
+
       </Routes> 
     </Router>
   );
