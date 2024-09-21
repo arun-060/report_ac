@@ -38,7 +38,7 @@ export default function SignIn() {
         } else if (role === 'student') {
           navigate(`/dashboard?userId=${username}`);
         } else if (role === 'faculty') {
-          navigate('/faculty-dashboard');
+          navigate(`/faculty-dashboard?userId=${userData.userId}`);
         } else {
           setError(`${role}`);
         }
@@ -59,9 +59,7 @@ export default function SignIn() {
   return (
     <div className="sign-in-container">
       <div className='main'>
-        <div className='image'>
-          <img src={image} alt="illustrator" />
-        </div>
+       
       <div className="sign-in-form">
         <h2>Sign In</h2>
         <form onSubmit={handleSignIn}>

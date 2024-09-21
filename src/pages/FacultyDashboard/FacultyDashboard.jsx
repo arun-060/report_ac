@@ -1,39 +1,73 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './FacultyDashboard.css';
 import { Search, User, ChevronDown, MoreVertical } from 'lucide-react';
-// import report from '../assets/report.png'
-import report from '../../assets/FacultyDashboard/report.png'
-import logo from '../../assets/FacultyDashboard/ArRp_logo-removebg-preview (1).png'
-import { useNavigate } from 'react-router-dom';
+import report from '../../assets/FacultyDashboard/report.png';
+import logo from '../../assets/FacultyDashboard/ArRp_logo-removebg-preview (1).png';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { db } from '../../firebase.config'; // Import database
+import { ref, get } from 'firebase/database';
 
 const FacultyDashboard = () => {
-  const reports = [
-    { id: 1, name: 'Report name', department: 'Comp Department' },
-    { id: 2, name: 'Report name', department: 'Comp Department' },
-    { id: 3, name: 'Report name', department: 'Comp Department' },
-    { id: 4, name: 'Report name', department: 'Comp Department' },
-  ];
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const username = searchParams.get("userId");
+
+  const [reports, setReports] = useState([]);
+
+  const navigate = useNavigate();
+
+  // Function to fetch data from Firebase Realtime Database
+  useEffect(() => {
+    const fetchReports = async () => {
+      const reportsRef = ref(db, 'reports'); // Reference to the 'reports' node
+      try {
+        const snapshot = await get(reportsRef);
+        if (snapshot.exists()) {
+          const data = snapshot.val();
+          // Firebase returns an object, map it to an array of reports
+          const reportsArray = Object.keys(data).map((reportKey) => {
+            const reportData = data[reportKey];
+            return {
+              id: reportData.id, // id is directly under the report object
+              name: reportKey, // Name is the key (e.g., 'Arunkumar Gupta')
+              department: reportData.department, // department is also at the top level
+              photo: reportData.photo.startsWith('data:image/')
+                ? reportData.photo // Already prefixed with data:image/
+                : `data:image/webp;base64,${reportData.photo}`, // Add prefix manually if missing
+              results: reportData.results, // In case you need results later
+            };
+          });
+          setReports(reportsArray);
+        } else {
+          console.log("No data available");
+        }
+      } catch (error) {
+        console.error("Error fetching reports:", error);
+      }
+    };
+
+    fetchReports();
+  }, []); // Runs once on component mount
 
   const handleLogout = () => {
     console.log("User logged out");
   };
 
-  const navigate = useNavigate();
-  const eventChange=()=>{
-    console.log("clicked")
-    navigate('/ReportForm')
-  }
+  const eventChange = () => {
+    console.log("clicked");
+    navigate('/ReportForm');
+  };
 
   return (
     <div className="faculty-dashboard">
       <header className="header">
         <div className="jodi">
-        <div className="logo">
-          <img src={logo} alt="ARP Logo" className='logoSize'/>
-        </div>
-        <div className=''>
-        Faculty
-        </div>
+          <div className="logo">
+            <img src={logo} alt="ARP Logo" className='logoSize'/>
+          </div>
+          <div className=''>
+            Faculty
+          </div>
         </div>
         <div className="search-container">
           <input type="text" placeholder="Search..." className="search-input" />
@@ -58,17 +92,22 @@ const FacultyDashboard = () => {
           <ChevronDown className="dropdown-icon" />
         </div>
 
-
-{/* mapping of js object */}
+        {/* Mapping the Firebase data */}
         <div className="reports-grid">
           {reports.map((report) => (
             <div key={report.id} className="report-card">
               <div className="report-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M21 3v18h-6V3h6z"></path>
-                  <path d="M15 7v14H9V7h6z"></path>
-                  <path d="M9 11v10H3V11h6z"></path>
-                </svg>
+                {/* Render the photo if available */}
+                {report.photo ? (
+                  <img
+                    src={report.photo}
+                    alt={report.name}
+                    className="report-photo"
+                    style={{ height: '50px', width: '50px', objectFit: 'cover', borderRadius:'50%' }}
+                  />
+                ) : (
+                  <div>No Image</div>
+                )}
               </div>
               <h3 className="report-name">{report.name}</h3>
               <p className="report-department">{report.department}</p>

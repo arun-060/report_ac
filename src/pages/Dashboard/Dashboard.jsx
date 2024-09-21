@@ -23,7 +23,6 @@ function Dashboard() {
   const [error, setError] = useState(null);
   const [activities, setActivities] = useState([]); // State to store fetched activities
   const [results, setResults] = useState(null); // State to store fetched results
-  let totalActivity = 0
 
   const fetchStudentData = async () => {
     try {
@@ -75,7 +74,6 @@ function Dashboard() {
     const studentId = "Arunkumar Gupta"; // Replace with the actual student ID
     fetchActivities(studentId)
       .then((activities) => {
-        totalActivity = activities.length()
         console.log("Activities:", activities);
       })
       .catch((error) => {

@@ -1,199 +1,195 @@
+.admin-dashboard {
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0; /* Light neutral background */
+}
 
-.faculty-dashboard {
-    font-family: 'Poppins', Arial, sans-serif;
-    background-color: #f4f6f9;
-    min-height: 100vh;
-    /* max-width: 100vw; */
-    color: #333;
-  }
+
+.header {
+  width: 97%;
+  background-color: #d8bdf1;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.logoSize {
+  height: 100px;
+  width: 100px;
+}
+
+.text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-right: 1000px;
+  color: #fff;
+  margin-left: 30px;
+}
+.jodi{
+  display: flex;
+  font-size: 1.2rem;
+  font-weight: bold;
+  /* margin-right: 1000px; */
+  color: #fff;
+  align-items: center;
   
-  .header {
-    width: 97%;
-    background-color: #d8bdf1;
-    padding: 1rem 2rem;
+}
+
+.search-container {
+      /* position: fixed; */
+    /* margin-left: 450px; */
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    height: 40px;
-  }
-  
-  .logoSize {
-    height: 40px;
-    width: 40px;
-  }
-  
-  .text {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-right: 1000px;
-    color: #fff;
-    margin-left: 30px;
-  }
-  .jodi{
-    display: flex;
-    font-size: 1.2rem;
-    font-weight: bold;
-    /* margin-right: 1000px; */
-    color: #fff;
-    align-items: center;
-    
-  }
-  
-  .search-container {
-        /* position: fixed; */
-      /* margin-left: 450px; */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50px;
-      margin-top: 10px;
+    justify-content: center;
+    border-radius: 50px;
     margin-top: 10px;
-  }
-  
-  .search-input {
-    
-    padding: 0.5rem 1rem;
-    width: 300px;
-    border-radius: 20px;
-    border: none;
-    outline: none;
-  }
-  
-  .search-icon {
-    position: absolute;
-    /* right: 10px; */
-    /* top: 30%; */
-    top: 40px;
-    right: 620px;
-  
-    transform: translateY(-50%);
-    cursor: pointer;
-  }
-  
-  .profile {
-    /* margin-left: 100px; */
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  .profile-icon {
-    width: 30px;
-    height: 30px;
-    color: #fff;
-  }
-  
-  .profile-logout {
-    background-color: #e74c3c;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .profile-logout:hover {
-    background-color: #c0392b;
-  }
-  
+  margin-top: 10px;
+}
 
+.search-input {
+  
+  padding: 0.5rem 1rem;
+  width: 300px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
 
+.search-icon {
+  position: absolute;
+  /* right: 10px; */
+  /* top: 30%; */
+  top: 40px;
+  right: 620px;
 
+  transform: translateY(-50%);
+  cursor: pointer;
+}
 
-.container {
-    font-family: Arial, sans-serif;
-    color: #333;
-  }
-  
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #FFD700;
-  }
-  
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .search-bar {
-    padding: 5px 10px;
-    border-radius: 15px;
-    border: none;
-    width: 300px;
-  }
-  
-  .profile {
-    display: flex;
-    align-items: center;
-  }
-  
-  .log-out {
-    margin-left: 10px;
-    font-size: 12px;
-  }
-  
-  .main {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-  }
-  
-  .column {
-    width: 45%;
-  }
-  
-  .column-title {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .list {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-  }
-  
-  .list-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-bottom: 1px solid #eee;
-  }
-  
-  .avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #ccc;
-    margin-right: 10px;
-  }
-  
-  .info {
-    flex: 1;
-  }
-  
-  .department {
-    font-size: 12px;
-    color: #666;
-  }
-  
-  .button {
-    padding: 5px 10px;
-    background-color: #6495ED;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+.profile {
+  /* margin-left: 100px; */
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 
-  
-  .column{
-    margin-top: 40px;
-  }
+.profile-icon {
+  width: 30px;
+  height: 30px;
+  color: #fff;
+}
+
+.profile-logout {
+  background-color: #e74c3c;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.profile-logout:hover {
+  background-color: #c0392b;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 400px;
+}
+
+.search-input {
+  padding: 10px 40px 10px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  width: 100%;
+  font-size: 1em;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+}
+
+.main-content {
+  margin-top: 30px;
+}
+
+.reports-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.report-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.report-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.report-icon {
+  margin-bottom: 10px;
+}
+
+.report-icon img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e0e0e0;
+}
+
+.report-name {
+  font-size: 1.3em;
+  font-weight: 600;
+  margin-top: 10px;
+  color: #333;
+}
+
+.report-department {
+  font-size: 1em;
+  color: #888;
+}
+
+.more-options {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #aaa;
+  transition: color 0.2s;
+}
+
+.more-options:hover {
+  color: #333;
+}
